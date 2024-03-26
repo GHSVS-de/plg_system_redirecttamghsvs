@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" client="site" group="system" method="upgrade">
+	<name>PLG_SYSTEM_REDIRECTTAMGHSVS</name>
+	<author>G@HService Berlin Neukölln, Volkmar Volli Schlothauer</author>
+	<creationDate>2024-03-26</creationDate>
+	<copyright>(C) 2024, G@HService Berlin Neukölln, Volkmar Volli Schlothauer.</copyright>
+	<license>GNU General Public License version 3 or later; see LICENSE.txt.</license>
+	<authorUrl>https://ghsvs.de</authorUrl>
+	<version>2024.03.26</version>
+	<description>PLG_SYSTEM_REDIRECTTAMGHSVS_XML_DESCRIPTION</description>
+
+	<updateservers><server type="extension" priority="1" name="PLG_SYSTEM_REDIRECTTAMGHSVS">https://raw.githubusercontent.com/GHSVS-de/upadateservers/master/plg_system_redirecttamghsvs-update.xml</server></updateservers>
+
+	<infourl>https://github.com/GHSVS-de/plg_system_redirecttamghsvs/releases/tag/2024.03.26</infourl>
+
+	<scriptfile>installerScript.php</scriptfile>
+	<minimumPhp>7.4.0</minimumPhp>
+	<maximumPhp></maximumPhp>
+	<minimumJoomla>4.3.0</minimumJoomla>
+	<maximumJoomla>5.9999.9999</maximumJoomla>
+	<allowDowngrades>1</allowDowngrades>
+
+	<files>
+		<folder>language</folder>
+		<folder plugin="redirecttamghsvs">services</folder>
+		<folder>src</folder>
+		<filename>installerScript.php</filename>
+		<filename>LICENSE.txt</filename>
+	</files>
+	<namespace path="src">GHSVS\Plugin\System\RedirectTamGhsvs</namespace>
+	<config addfieldprefix="GHSVS\Plugin\System\RedirectTamGhsvs\Field">
+		<fields name="params">
+			<fieldset name="basic">
+
+				<field type="hidden" default="1" name="redirecttamghsvsplugin"/>
+
+				<field name="extensionVersion" type="Version" extensionVersion="2024.03.26"
+					label="JVERSION"/>
+
+			</fieldset><!--/basic-->
+		</fields>
+	</config>
+</extension>
